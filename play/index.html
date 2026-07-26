@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Demo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function startExperience() {
+            document.getElementById("landing").style.display = "none";
+            document.getElementById("viewer").style.display = "flex";
+
+            const audio = document.getElementById("audio");
+            audio.play().catch(() => {});
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="landing">
+        <div class="container">
+            <h1>Interactive Demo</h1>
+
+            <p>
+                Press the button below to launch the experience.
+            </p>
+
+            <button onclick="startExperience()">
+                Start
+            </button>
+        </div>
+    </div>
+
+    <div id="viewer">
+        <img src="scare.jpg" alt="Image">
+
+        <audio id="audio" autoplay>
+            <source src="scream2.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+</body>
+
+</html>
